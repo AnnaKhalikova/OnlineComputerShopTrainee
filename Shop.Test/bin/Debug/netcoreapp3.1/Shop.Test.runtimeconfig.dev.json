@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\aikha\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\aikha\\.nuget\\packages"
+    ]
+  }
+}

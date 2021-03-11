@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="Shop.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Cmputer Shop Site</title>
+    <link rel="stylesheet" type="text/css" href="~/Styles/StyleSheet.css" />
+    <!-- Java script for menu and click button -->
+    <script type="text/javascript" src="../JavaScript/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript">
+        function mainmenu() {
+            $(" #nav ul ").css({ display: "none" }); // Opera Fix
+
+            $(" #nav li").hover(function () {
+                $(this).find('ul:first').css({ visibility: "visible", display: "none" }).show(400);
+            }
+            , function () {
+                $(this).find('ul:first').css({ visibility: "hidden" });
+            });
+        }
+        $(document).ready(function () {
+            mainmenu();
+        });
+    </script>
+    <script type="text/javascript">
+        function redirect(id) {
+            window.location.href = "/Buy.aspx?id="+id;
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper"><!--  wrapper is a main conteiner for all-->
+            
+            <!--  banner image and login+register menu  -->
+            <div id="banner">
+                <div id="login">
+                    <ul>
+                        <asp:Label ID="lblLogin" runat="server" ForeColor="Black" Visible="False"></asp:Label><br />
+                        <asp:LinkButton ID="lnkLogin" BackColor="Orange" ForeColor="White" runat="server" OnClick="lnkLogin_Click" CausesValidation="False">Login</asp:LinkButton>
+                        <asp:LinkButton ID="lnkRegister" BackColor="Orange" ForeColor="White" runat="server" OnClick="lnkRegister_Click" CausesValidation="False">Register</asp:LinkButton>
+                    </ul>
+                </div>
+            </div>
+            
+            <!--  navigation menu  -->
+            <ul id="navigation">
+                <ul id="nav">
+                    <li><a href="/Default.aspx">Home</a></li>
+                    <li><a href="/Catalog.aspx">Catalog</a>
+                        <ul>
+                            <li><a href="/Desktop.aspx">Desktop</a></li>
+                            <li><a href="/Notebook.aspx">Notebook</a></li>
+                            <li><a href="/Tablet.aspx">Tablet</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/Repair.aspx">Repair</a></li>
+                    <li><a href="/About.aspx">About</a></li>
+                    <li> <asp:HyperLink ID="lnkOrders" Visible="false" NavigateUrl="~/Orders.aspx" runat="server">Orders</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="lnkManage2" NavigateUrl="~/Manage.aspx" runat="server">Manage</asp:HyperLink></li>
+                </ul>
+            </ul>
+            <!--  content area    -->
+            <div id="content_area">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <p></p>
+                </asp:ContentPlaceHolder>
+            </div>
+            <!--  footer area    -->
+            <div id="footer">
+                <p>All rigths reserved to ComputerG &copy;.</p>
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

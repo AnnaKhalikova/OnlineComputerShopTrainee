@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Database" Label="CoffeeDB.sdf" Category="Database" Group="Expanded" />
+    <Node Id="Items" Label="Items" Category="Table" Group="Collapsed" />
+    <Node Id="Items_Id" Label="Id" Category="Field Primary" Description="int" />
+    <Node Id="Items_Category" Label="Category" Category="Field" Description="nvarchar(100)" />
+    <Node Id="Items_Name" Label="Name" Category="Field" Description="nvarchar(100)" />
+    <Node Id="Items_Quantity" Label="Quantity" Category="Field" Description="int" />
+    <Node Id="Items_Image" Label="Image" Category="Field" Description="nvarchar(100)" />
+    <Node Id="Items_Description" Label="Description" Category="Field" Description="nvarchar(250)" />
+    <Node Id="Items_PublishDate" Label="PublishDate" Category="Field" Description="nvarchar(100)" />
+    <Node Id="Items_Price" Label="Price" Category="Field" Description="int" />
+    <Node Id="Items_Type" Label="Type" Category="Field" Description="nvarchar(100)" />
+    <Node Id="Orders" Label="Orders" Category="Table" Group="Collapsed" />
+    <Node Id="Orders_Id" Label="Id" Category="Field Primary" Description="int" />
+    <Node Id="Orders_ClientID" Label="ClientID" Category="Field" Description="int" />
+    <Node Id="Orders_ProductID" Label="ProductID" Category="Field" Description="int" />
+    <Node Id="Orders_Ammount" Label="Ammount" Category="Field" Description="int" />
+    <Node Id="Orders_Price" Label="Price" Category="Field" Description="int" />
+    <Node Id="Orders_Date" Label="Date" Category="Field" Description="nvarchar(100)" />
+    <Node Id="Orders_Info" Label="Info" Category="Field" Description="nvarchar(100)" />
+    <Node Id="Orders_TotalPrice" Label="TotalPrice" Category="Field" Description="int" />
+    <Node Id="Users" Label="Users" Category="Table" Group="Collapsed" />
+    <Node Id="Users_Id" Label="Id" Category="Field Primary" Description="int" />
+    <Node Id="Users_Name" Label="Name" Category="Field" Description="nvarchar(100)" />
+    <Node Id="Users_Password" Label="Password" Category="Field" Description="nvarchar(100)" />
+    <Node Id="Users_Email" Label="Email" Category="Field" Description="nvarchar(250)" />
+    <Node Id="Users_Type" Label="Type" Category="Field" Description="nvarchar(100)" />
+    <Node Id="Users_Info" Label="Info" Category="Field Optional" Description="nvarchar(500)" />
+    <Node Id="Users_CreditCard" Label="CreditCard" Category="Field" Description="nvarchar(30)" />
+  </Nodes>
+  <Links>
+    <Link Source="Database" Target="Items" Category="Contains" />
+    <Link Source="Items" Target="Items_Id" Category="Contains" />
+    <Link Source="Items" Target="Items_Category" Category="Contains" />
+    <Link Source="Items" Target="Items_Name" Category="Contains" />
+    <Link Source="Items" Target="Items_Quantity" Category="Contains" />
+    <Link Source="Items" Target="Items_Image" Category="Contains" />
+    <Link Source="Items" Target="Items_Description" Category="Contains" />
+    <Link Source="Items" Target="Items_PublishDate" Category="Contains" />
+    <Link Source="Items" Target="Items_Price" Category="Contains" />
+    <Link Source="Items" Target="Items_Type" Category="Contains" />
+    <Link Source="Database" Target="Orders" Category="Contains" />
+    <Link Source="Orders" Target="Orders_Id" Category="Contains" />
+    <Link Source="Orders" Target="Orders_ClientID" Category="Contains" />
+    <Link Source="Orders" Target="Orders_ProductID" Category="Contains" />
+    <Link Source="Orders" Target="Orders_Ammount" Category="Contains" />
+    <Link Source="Orders" Target="Orders_Price" Category="Contains" />
+    <Link Source="Orders" Target="Orders_Date" Category="Contains" />
+    <Link Source="Orders" Target="Orders_Info" Category="Contains" />
+    <Link Source="Orders" Target="Orders_TotalPrice" Category="Contains" />
+    <Link Source="Database" Target="Users" Category="Contains" />
+    <Link Source="Users" Target="Users_Id" Category="Contains" />
+    <Link Source="Users" Target="Users_Name" Category="Contains" />
+    <Link Source="Users" Target="Users_Password" Category="Contains" />
+    <Link Source="Users" Target="Users_Email" Category="Contains" />
+    <Link Source="Users" Target="Users_Type" Category="Contains" />
+    <Link Source="Users" Target="Users_Info" Category="Contains" />
+    <Link Source="Users" Target="Users_CreditCard" Category="Contains" />
+  </Links>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Table" ValueLabel="True">
+      <Condition Expression="HasCategory('Table')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Schema" ValueLabel="True">
+      <Condition Expression="HasCategory('Schema')" />
+      <Setter Property="Background" Value="#FF7F9169" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field" ValueLabel="True">
+      <Condition Expression="HasCategory('Field')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Database" ValueLabel="True">
+      <Condition Expression="HasCategory('Database')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+</DirectedGraph>

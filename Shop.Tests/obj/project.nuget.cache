@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "QjtgKKS4g/q/o/BK/joOSvlfqrHhYOgYWvu+dmtRDnraH38Ha9+YW5AQLE4LJwWhaPB+69EKMPsFCtg+DO9voQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\aikha\\Downloads\\Internet_Computer_Shop-master\\Shop.Tests\\Shop.Tests.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aikha\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\aikha\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
